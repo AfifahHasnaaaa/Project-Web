@@ -35,58 +35,64 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
-            <table class="table container">
-                <tr>
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;margin:auto;">
-                        <div style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Nama Barang</p>
-                            <h1 style="font-size: 35px">150</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
 
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;">
-                        <div class="text-center" style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Stok Barang</p>
-                            <h1 style="font-size: 35px">8765</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
+          <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h5><i class="fa fa-desktop"></i> Nama Barang</h5>
+                  </div>
+                  <div class="panel-body">
+                    <h1>25</h1>
+                  </div>
+                  <div class="panel-footer">
+                    <h4 style="font-size:15px;font-weight:700;"><a href='index.php?page=barang'>Tabel Barang <i class='fa fa-angle-double-right'></i></a></h4>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h5><i class="fa fa-desktop"></i> Nama Barang</h5>
+                </div>
+                <div class="panel-body">
+                  <h1>25</h1>
+                </div>
+                <div class="panel-footer">
+                  <h4 style="font-size:15px;font-weight:700;"><a href='index.php?page=barang'>Tabel Barang <i class='fa fa-angle-double-right'></i></a></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h5><i class="fa fa-desktop"></i> Nama Barang</h5>
+                </div>
+                <div class="panel-body">
+                  <h1>25</h1>
+                </div>
+                <div class="panel-footer">
+                  <h4 style="font-size:15px;font-weight:700;"><a href='index.php?page=barang'>Tabel Barang <i class='fa fa-angle-double-right'></i></a></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h5><i class="fa fa-desktop"></i> Nama Barang</h5>
+                </div>
+                <div class="panel-body">
+                  <h1>25</h1>
+                </div>
+                <div class="panel-footer">
+                  <h4 style="font-size:15px;font-weight:700;"><a href='index.php?page=barang'>Tabel Barang <i class='fa fa-angle-double-right'></i></a></h4>
+                </div>
+              </div>
+            </div>
+        </div>
+    
 
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;">
-                        <div class="text-center" style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Barang Terjual</p>
-                            <h1 style="font-size: 35px">5690</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
-
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;">
-                        <div class="text-center" style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Barang Terkirim</p>
-                            <h1 style="font-size: 35px">345</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
-                    
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;">
-                        <div class="text-center" style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Brand</p>
-                            <h1 style="font-size: 35px">15</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
-
-                    <th style="padding-left: 10px;padding-right:10px;padding-top:5;padding-bottom:5;background-color:yellow;border-radius: 25px;text-align:center;">
-                        <div class="text-center" style="padding: 2px; width:100px;">
-                            <p style="font-size: 13px">Review</p>
-                            <h1 style="font-size: 35px">279</h1>
-                            <p><a href=""style="font-size: 10px">See Details</a></p>
-                        </div>
-                    </th>
-
-                </tr>
-            </table>
+            
           
         </div>
       </div>

@@ -88,7 +88,11 @@ class User extends Controller
             session(['nama' => $user->nama]);
             session(['id_user' => $user->id_user]);
 
-            return redirect()->intended('/transaksi');
+            if ($user->role == 'admin') {
+                return redirect()->intended('admin');
+            } else {
+                return redirect()->intended('user');
+            }
     }
     public function logout(Request $request)
     {
