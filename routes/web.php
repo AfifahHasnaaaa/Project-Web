@@ -67,6 +67,11 @@ Route::get('/login', [User::class, 'login']);
 Route::post('/login', [User::class, 'loginProcess']);
 Route::get('/logout', [User::class, 'logout']);
 
-
+Route::get('/produkuser', function () {
+    return view('coba');
+});
+Route::get('/admin', function () {
+    return view('home_admin');
+});
 
 
