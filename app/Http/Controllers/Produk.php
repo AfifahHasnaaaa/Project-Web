@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produkmodel;
-use App\Models\KeranjangModel;
+use App\Models\TransaksiModel;
 use App\Models\BrandModel;
 use App\Models\ReviewModel;
 use Illuminate\Http\Request;
@@ -18,9 +18,7 @@ class Produk extends Controller
     public function index()
     {
         $produk = Produkmodel::count();
-        $transaksi = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
-            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
-            ->first();
+        $transaksi = TransaksiModel::sum('total_bayar');
         $brand = BrandModel::count();
         $review = ReviewModel::count();
         return view('produk/list', compact('produk','transaksi','brand','review'));

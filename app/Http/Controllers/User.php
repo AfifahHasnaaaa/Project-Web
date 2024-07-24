@@ -70,14 +70,10 @@ class User extends Controller
                 break;
 
             case '2':
-                $orderby = 'password';
-                break;
-
-            case '3':
                 $orderby = 'nama';
                 break;
 
-            case '4':
+            case '3':
                 $orderby = 'last_login';
                 break;
 
@@ -108,7 +104,6 @@ class User extends Controller
             $row_data = [];
             $row_data[] = $key + 1;
             $row_data[] = $value->username;
-            $row_data[] = $value->password;
             $row_data[] = $value->nama;
             $row_data[] = $value->last_login;
 

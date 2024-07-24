@@ -5,8 +5,8 @@
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
-				<li><a href="{{ url('shop') }}">Shop</a></li>
-				<li class='active'>Riwayat Transaksi</li>
+				<li><a href="{{ url('shop') }}">Produk</a></li>
+				<li class='active'>Riwayat</li>
 			</ul>
 		</div>
     </div>

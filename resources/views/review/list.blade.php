@@ -20,10 +20,6 @@
                 <label>Nama</label>
                 <input class="form-control" type="text" name="nama" id="kode_review">
             </div>
-            <div class="col-md-6">
-                <label>Review</label>
-                <input class="form-control" type="text" name="review" id="review">
-            </div>
             <div class="col">
                 <input type="submit" value="Cari" class="btn btn-primary" style="margin-top:33px" id="">
             </div>

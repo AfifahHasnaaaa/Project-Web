@@ -17,10 +17,6 @@
     <form style="padding: 4%;border-style: double;border-radius: 5px;background-color:white;margin-bottom:2%;margin-top:2%;">
         <div class="row">
             <div class="col-md-6">
-                <label>Username</label>
-                <input class="form-control" type="text" name="username" id="username">
-            </div>
-            <div class="col-md-6">
                 <label>Nama</label>
                 <input class="form-control" type="text" name="nama" id="nama">
             </div>
@@ -35,7 +31,6 @@
             <tr>
                 <th>No.</th>
                 <th>Username</th>
-                <th>Password</th>
                 <th>Nama</th>
                 <th>Last Login</th>
             </tr>
@@ -57,7 +52,6 @@
 			url: url,
 			data: function (d) {
                 d.tgl_awal = $("#username").val();
-                d.tgl_akhir = $("#password").val();
                 d.prov = $("#nama").val();
                 d.min_total = $("#last_login").val();
        		}

@@ -58,7 +58,7 @@
                   <h5>Penjualan</h5>
                 </div>
                 <div class="panel-body" style="text-align: center;c">
-                  <h1 style="font-size:30px;">Rp {{ $transaksi->total }}</h1>
+                  <h1 style="font-size:27px;">Rp {{ $transaksi}}</h1>
                 </div>
                 <div class="panel-footer">
                   <h5 style="font-size:12px;font-weight:500;"><a href="{{ url('transaksi') }}">Tabel Transaksi </a></h5>

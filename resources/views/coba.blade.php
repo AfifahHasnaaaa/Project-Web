@@ -6,8 +6,8 @@
     <div class="container">
       <div class="breadcrumb-inner">
         <ul class="list-inline list-unstyled">
-          <li><a href="{{ url('homeuser') }}">User</a></li>
-          <li class='active'>Page Home</li>
+          <li><a href="#">Home</a></li>
+          <li class='active'>User</li>
         </ul>
       </div>
       </div>
