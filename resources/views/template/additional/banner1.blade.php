@@ -7,7 +7,7 @@
                 <div class="slider-header fadeInDown-1">Top Brands</div>
                 <div class="big-text fadeInDown-1"> New Collections </div>
                 <div class="excerpt fadeInDown-2 hidden-xs"> <span>Hodie kekinian dengan model menarik.</span> </div>
-                <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
+                <div class="button-holder fadeInDown-3"> <a href="{{ url('login') }}" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
             </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <div class="slider-header fadeInDown-1">Spring 2016</div>
                 <div class="big-text fadeInDown-1"> Women <span class="highlight">Fashion</span> </div>
                 <div class="excerpt fadeInDown-2 hidden-xs"> <span>Hodie kekinian dengan bahan berkualitas</span> </div>
-                <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
+                <div class="button-holder fadeInDown-3"> <a href="{{ url('login') }}" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
             </div>
             </div>
         </div>

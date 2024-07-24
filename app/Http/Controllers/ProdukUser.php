@@ -4,20 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Produkmodel;
 use App\Models\KeranjangModel;
+use App\Models\ReviewModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class ProdukUser extends Controller
 {
-
-    public function cari(Request $request)
-    {
-        $stok = $request->cari;
-        $product = Produkmodel::where('stok', '<=', $stok)->get();
-        return view('coba', compact('product'));
-    }
-    
-    public function index()
+    public function home()
     {
         $produk = Produkmodel::take(2)->get();
         $product = Produkmodel::all();
@@ -26,7 +19,25 @@ class ProdukUser extends Controller
         $best = Produkmodel::take(3)->get();
         $new = Produkmodel::take(4)->get();
         $featured = Produkmodel::take(4)->get();
-        return view('coba', compact('produk','produks','best','new','featured','product','productt'));
+        $review = ReviewModel::all();
+        return view('index', compact('produk','produks','best','new','featured','product','productt','review'));
+    }
+
+    public function index()
+    {
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        $produk = Produkmodel::take(2)->get();
+        $product = Produkmodel::all();
+        $productt = Produkmodel::all();
+        $produks = Produkmodel::take(3)->get();
+        $best = Produkmodel::take(3)->get();
+        $new = Produkmodel::take(4)->get();
+        $featured = Produkmodel::take(4)->get();
+        $review = ReviewModel::all();
+        return view('coba', compact('produk','produks','best','new','featured','product','productt','data','review'));
     }
 
     public function create()
@@ -42,13 +53,18 @@ class ProdukUser extends Controller
         if (!$productt) {
             return redirect()->back()->with('error', 'Produk tidak ditemukan.');
         }
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
         $produk = Produkmodel::take(1)->get();
         $produks = Produkmodel::take(3)->get();
         $best = Produkmodel::take(3)->get();
         $new = Produkmodel::take(4)->get();
         $featured = Produkmodel::take(4)->get();
         $product = Produkmodel::findOrFail($id);
-        return view('detail', compact('produk','product','produks','best','new','featured','productt'));
+        $review = ReviewModel::all();
+        return view('detail', compact('produk','product','produks','best','new','featured','productt','data','review'));
     }
         
     public function produk()
@@ -57,11 +73,46 @@ class ProdukUser extends Controller
         if (!$produk) {
             return redirect()->back()->with('error', 'Produk tidak ditemukan.');
         }
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
         // $produk = Produkmodel::all();
         $produks = Produkmodel::take(3)->get();
         $best = Produkmodel::take(3)->get();
         $featured = Produkmodel::take(4)->get();
-        return view('produk', compact('produk','produks','best','featured'));
+        $review = ReviewModel::all();
+        return view('produk', compact('produk','produks','best','featured','data','review'));
+    }
+    public function faq()
+    {
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        $produk = Produkmodel::take(2)->get();
+        $product = Produkmodel::all();
+        $productt = Produkmodel::all();
+        $produks = Produkmodel::take(3)->get();
+        $best = Produkmodel::take(3)->get();
+        $new = Produkmodel::take(4)->get();
+        $featured = Produkmodel::take(4)->get();
+        return view('faq', compact('produk','produks','best','new','featured','product','productt','data',));
+    }
+    public function kontak()
+    {
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        $produk = Produkmodel::take(2)->get();
+        $product = Produkmodel::all();
+        $productt = Produkmodel::all();
+        $produks = Produkmodel::take(3)->get();
+        $best = Produkmodel::take(3)->get();
+        $new = Produkmodel::take(4)->get();
+        $featured = Produkmodel::take(4)->get();
+        return view('kontak', compact('produk','produks','best','new','featured','product','productt','data'));
     }
     
     public function store(Request $request)

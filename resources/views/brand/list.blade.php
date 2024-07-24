@@ -1,19 +1,19 @@
 @extends('template/admin/layout_admin')
 
-@section('konten_admin')
+@section('konten')
     <link rel="stylesheet" type="text/css" href="{{ url('DataTables/DataTables-1.10.25/css/dataTables.bootstrap4.min.css') }}">
 
     <div class="breadcrumb">
         <div class="container">
             <div class="breadcrumb-inner">
                 <ul class="list-inline list-unstyled">
-                    <li><a href="{{ url('admin') }}">Home</a></li>
+                    <li><a href="{{ url('produk') }}">Home</a></li>
                     <li class='active'>Data Brand</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div style="margin-left:15%;margin-right:15%">
+    <div style="margin-left:15%;margin-right:15%;margin-bottom:2%;">
         <form
             style="padding: 2%;border-style: double;border-radius: 5px;background-color:white;margin-bottom:2%;margin-top:2%;">
             <div class="row">
@@ -72,9 +72,7 @@
             "ajax": {
                 url: url,
                 data: function(d) {
-                    d.kode_brand = $("#kode_brand").val();
                     d.nama_brand = $("#nama_brand").val();
-                    d.jumlah_produk = $("#jumlah_produk").val();
                 }
             },
 

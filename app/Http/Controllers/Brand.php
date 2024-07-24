@@ -225,7 +225,7 @@ class Brand extends Controller
     {
         $search = $request->query('search');
         $order = $request->query('order');
-        $search_stok = $request->query('jumlah_produk');
+        $nama_brand = $request->query('nama_brand');
 
         switch ($order[0]['column']) {
             case '0':
@@ -251,10 +251,17 @@ class Brand extends Controller
 
         $data_db_total = BrandModel::all();
         $data_db_filtered = BrandModel::where('nama_brand', 'like', '%'.$search['value'].'%');
+        if ($nama_brand != '' && $nama_brand != null) {
+            $data_db_filtered = $data_db_filtered->where('nama_brand', '<=', $nama_brand);
+        }
 
         $data_db_filtered = $data_db_filtered->get();
 
         $data_db = BrandModel::where('nama_brand', 'like', '%'.$search['value'].'%');
+        if ($nama_brand != '' && $nama_brand != null) {
+            $data_db = $data_db->where('nama_brand', '<=', $nama_brand);
+        }
+
 
         $data_db = $data_db->offset($request->query('start'))
         ->limit($request->query('length'))

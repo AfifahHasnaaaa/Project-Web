@@ -45,7 +45,7 @@
                     <h5>Nama Barang</h5>
                   </div>
                   <div class="panel-body" style="text-align: center">
-                    <h1>25</h1>
+                    <h1 style="font-size:30px;">{{ $produk}}</h1>
                   </div>
                   <div class="panel-footer">
                     <h4 style="font-size:12px;font-weight:500;"><a href="{{ url('tabelproduk') }}">Tabel Barang</a></h4>
@@ -57,11 +57,11 @@
                 <div class="panel-heading">
                   <h5>Penjualan</h5>
                 </div>
-                <div class="panel-body" style="text-align: center">
-                  <h1>7235</h1>
+                <div class="panel-body" style="text-align: center;c">
+                  <h1 style="font-size:27px;">Rp {{ $transaksi}}</h1>
                 </div>
                 <div class="panel-footer">
-                  <h5 style="font-size:12px;font-weight:500;"><a href="{{ url('transaksi') }}">Tabel Penjualan </a></h5>
+                  <h5 style="font-size:12px;font-weight:500;"><a href="{{ url('transaksi') }}">Tabel Transaksi </a></h5>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@
                   <h5>Brand</h5>
                 </div>
                 <div class="panel-body" style="text-align: center">
-                  <h1>6</h1>
+                  <h1 style="font-size:30px;">{{ $brand}}</h1>
                 </div>
                 <div class="panel-footer">
                   <h4 style="font-size:12px;font-weight:500;"><a href="{{ url('brand') }}">Tabel Brand</a></h4>
@@ -84,7 +84,7 @@
                   <h5>Review</h5>
                 </div>
                 <div class="panel-body" style="text-align: center">
-                  <h1>796</h1>
+                  <h1 style="font-size:30px;">{{ $review}}</h1>
                 </div>
                 <div class="panel-footer">
                   <h4 style="font-size:12px;font-weight:500;"><a href="{{ url('review') }}">Tabel Review</a></h4>

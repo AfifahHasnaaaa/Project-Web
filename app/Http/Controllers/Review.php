@@ -244,6 +244,7 @@ class Review extends Controller
     {
         $search = $request->query('search');
         $order = $request->query('order');
+        $nama = $request->query('nama');
 
         switch ($order[0]['column']) {
             case '0':
@@ -277,10 +278,19 @@ class Review extends Controller
 
         $data_db_total = ReviewModel::all();
         $data_db_filtered =ReviewModel::where('nama', 'like', '%'.$search['value'].'%');
+        if ($nama != '' && $nama != null) {
+            $data_db_filtered = $data_db_filtered->where('nama', '<=', $nama);
+        }
 
         $data_db_filtered = $data_db_filtered->get();
 
         $data_db = ReviewModel::where('nama', 'like', '%'.$search['value'].'%');
+        if ($nama != '' && $nama != null) {
+            $data_db_filtered = $data_db_filtered->where('nama', '<=', $nama);
+        }
+
+
+
 
         $data_db = $data_db->offset($request->query('start'))
         ->limit($request->query('length'))

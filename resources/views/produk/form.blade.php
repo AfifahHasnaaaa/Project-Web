@@ -36,7 +36,7 @@
 			display: none;
 		}
 	</style>   
-	<form id="formData" enctype="multipart/form-data" method="POST" action="{{ url('tabelproduk') }}" style="margin-left:15%;margin-right:15%;margin-top:2%;margin-bottom:2%;width: 100%;">
+	<form enctype="multipart/form-data" method="POST" action="{{ url('tabelproduk') }}"style="margin-left:15%;margin-right:15%;margin-top:2%;margin-bottom:2%;">
 		@csrf
 		<table>
 			<tr>

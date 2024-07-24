@@ -222,8 +222,8 @@
     </div>
     <div class="col col-2">
         <div class="btn-box">
-            <a href="login.blade.php"><button class="btn btn-1" id="login">Sign In</button></a>
-            <a href="register.blade.php"><button class="btn btn-2" id="register" >Sign Up</button></a>
+            <a href="#"><button class="btn btn-1" id="login">Sign In</button></a>
+            <a href="#"><button class="btn btn-2" id="register" >Sign Up</button></a>
         </div>
         <!-- Login -->
         <div class="login-form">

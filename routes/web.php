@@ -11,22 +11,12 @@ use App\Http\Controllers\Transaksi;
 use App\Http\Controllers\User;
 
 Route::get('/homeuser', [ProdukUser::class, 'index'])->name('produk.index');
-Route::get('/homeuser/cari', [ProdukUser::class, 'cari'])->name('produk.cari');
-Route::post('/keranjang/tambah', [ProdukUser::class, 'tambahKeKeranjang'])->name('keranjang.tambah');
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/faq', function () {
-    return view('faq');
-});
-Route::get('/kontak', function () {
-    return view('kontak');
-});
+Route::get('/', [ProdukUser::class, 'home']);
+Route::get('/faq', [ProdukUser::class, 'faq']);
+Route::get('/kontak', [ProdukUser::class, 'kontak']);
 Route::get('/shop', [ProdukUser::class, 'produk']);
 Route::get('/detail/{id}', [ProdukUser::class, 'detail']);
-Route::get('/profiladmin', function () {
-    return view('profil_admin');
-});
+
 Route::get('/aplikasi', function () {
     return view('aplikasi_admin');
 });
@@ -67,11 +57,7 @@ Route::get('/login', [User::class, 'login']);
 Route::post('/login', [User::class, 'loginProcess']);
 Route::get('/logout', [User::class, 'logout']);
 
-Route::get('/produkuser', function () {
-    return view('coba');
-});
-Route::get('/admin', function () {
-    return view('home_admin');
-});
+
+
 
 

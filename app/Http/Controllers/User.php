@@ -59,6 +59,7 @@ class User extends Controller
     {
         $search = $request->query('search');
         $order = $request->query('order');
+        $nama = $request->query('nama');
 
         switch ($order[0]['column']) {
             case '0':
@@ -70,14 +71,10 @@ class User extends Controller
                 break;
 
             case '2':
-                $orderby = 'password';
-                break;
-
-            case '3':
                 $orderby = 'nama';
                 break;
 
-            case '4':
+            case '3':
                 $orderby = 'last_login';
                 break;
 
@@ -88,11 +85,17 @@ class User extends Controller
 
         $data_db_total = UserModel::all();
         $data_db_filtered = UserModel::where('nama', 'like', '%' . $search['value'] . '%');
+        if ($nama != '' && $nama != null) {
+            $data_db_filtered = $data_db_filtered->where('nama', '<=', $nama);
+        }
 
 
         $data_db_filtered = $data_db_filtered->get();
 
         $data_db = UserModel::where('nama', 'like', '%' . $search['value'] . '%');
+        if ($nama != '' && $nama != null) {
+            $data_db = $data_db->where('nama', '<=', $nama);
+        }
 
 
         $data_db = $data_db->offset($request->query('start'))
@@ -108,7 +111,6 @@ class User extends Controller
             $row_data = [];
             $row_data[] = $key + 1;
             $row_data[] = $value->username;
-            $row_data[] = $value->password;
             $row_data[] = $value->nama;
             $row_data[] = $value->last_login;
 
@@ -157,10 +159,11 @@ class User extends Controller
             session(['nama' => $user->nama]);
             session(['id_user' => $user->id_user]);
 
+            // return redirect()->intended('/transaksi');
             if ($user->role == 'admin') {
-                return redirect()->intended('admin');
-            } else {
-                return redirect()->intended('coba');
+                return redirect()->intended('produk');
+            } else if ($user->role == 'user'){
+                return redirect()->intended('homeuser');
             }
     }
     public function logout(Request $request)

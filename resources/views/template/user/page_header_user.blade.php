@@ -5,10 +5,10 @@
 		<div class="header-top-inner">
 		  <div class="cnt-account">
 			<ul class="list-unstyled">
-			  <li><a href="{{ url('keranjang') }}"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-			  <li><a href="{{ url('checkout') }}"><i class="icon fa fa-check"></i>Checkout</a></li>
-			  <li><a href="#"><i class="icon fa fa-user"></i>User</a></li>
-			  <li><a href="{{ url('logout') }}"><i class="icon fa fa-lock"></i>Logout</a></li>
+			  	<li><a href="{{ url('checkout') }}"><i class="icon fa fa-check"></i>Checkout</a></li>
+				<li><a href="{{ url('transaksiuser') }}"><i class="icon fa fa-check"></i>History</a></li>
+			  	<li><a href="#"><i class="icon fa fa-user"></i>User</a></li>
+			  	<li><a href="{{ url('logout') }}"><i class="icon fa fa-lock"></i>Logout</a></li>
 			</ul>
 		  </div>
 		</div>
@@ -20,21 +20,20 @@
 		<div class="row">
 		  <div class="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
 			
-			<div class="logo"> <a href="home.blade.php"> <img src="{{ asset('assets/images/Logooo.png') }}" alt="logo"> </a> </div></div>
+			<div class="logo"> <a href="#"> <img src="{{ asset('assets/images/Logooo.png') }}" alt="logo"> </a> </div></div>
 		  
 		  <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder"> 
 			<div class="search-area">
 			  <form>
 				<div class="control-group">
 				  <ul class="categories-filter animate-dropdown">
-					<li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
+					<li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="#">Categories <b class="caret"></b></a>
 					  <ul class="dropdown-menu" role="menu" >
 						<li class="menu-header">Hodiee</li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">Pria Dewasa</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">Wanita Dewasa</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">Remaja Pria</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">Dewasa Wanita</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">Anak-anak</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('shop') }}">Wanita Dewasa</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('shop') }}">Remaja Pria</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('shop') }}">Dewasa Wanita</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url('shop') }}">Anak-anak</a></li>
 					  </ul>
 					</li>
 				  </ul>
@@ -44,11 +43,11 @@
 			</div>
 			</div>
 		  <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row"> 
-			<div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart">
+			<div class="dropdown dropdown-cart"> <a href="{{ url('keranjang') }}" class="dropdown-toggle lnk-cart">
 			  <div class="items-cart-inner">
-				<div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-				<div class="basket-item-count"><span class="count">2</span></div>
-				<div class="total-price-basket"><span class="value">Rp 50.000</span> </div>
+				<div class="basket"><i class="glyphicon glyphicon-shopping-cart"></i> </div>
+				<div class="basket-item-count"><span class="count">{{ $data->jumlah }}</span></div>
+				<div class="total-price-basket"><span class="value">Rp {{ $data->total }}</span> </div>
 			  </div>
 			  </a>
 			</div>

@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-<div style="margin-left:15%;margin-right:10%">
+<div style="margin-left:15%;margin-right:10%;margin-bottom:2%;">
     <form style="padding: 4%;border-style: double;border-radius: 5px;background-color:white;margin-bottom:2%;margin-top:2%;">
         <div class="row">
             <div class="col-md-6">

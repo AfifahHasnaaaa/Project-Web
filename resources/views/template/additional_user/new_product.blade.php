@@ -17,11 +17,11 @@
               <div class="products">
                 <div class="product">
                   <div class="product-image">
-                    <div class="image"> <a href="detail.html"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
+                    <div class="image"> <a href="#"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
                     <div class="tag new"><span>New</span></div>
                   </div>
                   <div class="product-info text-left">
-                    <h3 class="name"><a href="detail.html">{{ $item->nama_produk }}</a></h3>
+                    <h3 class="name"><a href="#">{{ $item->nama_produk }}</a></h3>
                     <div class="rating rateit-small"></div>
                     <div class="description"></div>
                     <div class="product-price"> <span class="price">Rp{{ $item->harga }}</span> </div>
@@ -48,11 +48,11 @@
               <div class="products">
                 <div class="product">
                   <div class="product-image">
-                    <div class="image"> <a href="detail.html"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
+                    <div class="image"> <a href="#"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
                     <div class="tag new"><span>New</span></div>
                   </div>
                   <div class="product-info text-left">
-                    <h3 class="name"><a href="detail.html">{{ $item->nama_produk }}</a></h3>
+                    <h3 class="name"><a href="#">{{ $item->nama_produk }}</a></h3>
                     <div class="rating rateit-small"></div>
                     <div class="description"></div>
                     <div class="product-price"> <span class="price">Rp{{ $item->harga }}</span> </div>
@@ -60,11 +60,7 @@
                   <div class="cart clearfix animate-effect">
                     <div class="action">
                       <ul class="list-unstyled">
-                        <li class="add-cart-button btn-group">
-                          <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                        </li>
-                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="#" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="{{ url('detail/'. $item->id_produk) }}" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                       </ul>
                     </div>
                   </div>
@@ -83,11 +79,11 @@
               <div class="products">
                 <div class="product">
                   <div class="product-image">
-                    <div class="image"> <a href="detail.html"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
+                    <div class="image"> <a href="#"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
                     <div class="tag new"><span>New</span></div>
                   </div>
                   <div class="product-info text-left">
-                    <h3 class="name"><a href="detail.html">{{ $item->nama_produk }}</a></h3>
+                    <h3 class="name"><a href="#">{{ $item->nama_produk }}</a></h3>
                     <div class="rating rateit-small"></div>
                     <div class="description"></div>
                     <div class="product-price"> <span class="price">Rp{{ $item->harga }}</span> </div>
@@ -95,12 +91,7 @@
                   <div class="cart clearfix animate-effect">
                     <div class="action">
                       <ul class="list-unstyled">
-                        <li class="add-cart-button btn-group">
-                          <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                        </li>
-                  
-                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="#" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="{{ url('detail/'. $item->id_produk) }}" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                       </ul>
                     </div>
                   </div>
@@ -119,11 +110,11 @@
               <div class="products">
                 <div class="product">
                   <div class="product-image">
-                    <div class="image"> <a href="detail.html"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
+                    <div class="image"> <a href="#"><img  src="assets/images/products/{{ $item->foto_produk }}" alt=""></a> </div>
                     <div class="tag new"><span>New</span></div>
                   </div>
                   <div class="product-info text-left">
-                    <h3 class="name"><a href="detail.html">{{ $item->nama_produk }}</a></h3>
+                    <h3 class="name"><a href="#">{{ $item->nama_produk }}</a></h3>
                     <div class="rating rateit-small"></div>
                     <div class="description"></div>
                     <div class="product-price"> <span class="price">Rp{{ $item->harga }}</span> </div>
@@ -131,12 +122,8 @@
                   <div class="cart clearfix animate-effect">
                     <div class="action">
                       <ul class="list-unstyled">
-                        <li class="add-cart-button btn-group">
-                          <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                          <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-                        </li>
             
-                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="#" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                        <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="{{ url('detail/'. $item->id_produk) }}" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                       </ul>
                     </div>
                   </div>

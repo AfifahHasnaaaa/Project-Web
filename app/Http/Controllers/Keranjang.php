@@ -15,7 +15,11 @@ class Keranjang extends Controller
      */
     public function index()
     {
-        return view('keranjang/list');
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        return view('keranjang/list', compact('data'));
     }
 
     /**

@@ -8,9 +8,9 @@
               <div class="row">
                 <div class="col-sm-12 col-md-3">
                   <ul class="links list-unstyled">
-                    <li><a href="#">Hodie Anak-anak</a></li>
-                    <li><a href="#">Hodie Remaja</a></li>
-                    <li><a href="#">Hodie Dewasa</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Anak-anak</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Remaja</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Dewasa</a></li>
                   </ul>
                 </div>
               </div>
@@ -24,9 +24,9 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-lg-4">
                   <ul class="links list-unstyled">
-                    <li><a href="#">Hodie Anak-anak</a></li>
-                    <li><a href="#">Hodie Remaja</a></li>
-                    <li><a href="#">Hodie Dewasa</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Anak-anak</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Remaja</a></li>
+                    <li><a href="{{ url('login') }}">Hodie Dewasa</a></li>
                   </ul>
                 </div>
               </div>

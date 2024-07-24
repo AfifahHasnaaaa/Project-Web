@@ -1,7 +1,7 @@
 <div class="sidebar-widget product-tag wow fadeInUp">
     <h3 class="section-title">Product tags</h3>
     <div class="sidebar-widget-body outer-top-xs">
-      <div class="tag-list"> <a class="item" title="Pria" href="#">Pria</a> <a class="item active" title="Wanita"  href="#">Wanita</a> <a class="item" title="Anak-anak"  href="#">Anak-anak</a> <a class="item" title="Remaja"  href="#">Remaja</a> <a class="item" title="Dewasa"  href="#">Dewasa</a></div>
+      <div class="tag-list"> <a class="item" title="Anak-anak"  href="{{ url('shop') }}">Anak-anak</a> <a class="item" title="Remaja"  href="{{ url('shop') }}">Remaja</a> <a class="item" title="Dewasa"  href="{{ url('shop') }}">Dewasa</a></div>
     </div>
   </div>
   <div class="sidebar-widget outer-bottom-small wow fadeInUp">

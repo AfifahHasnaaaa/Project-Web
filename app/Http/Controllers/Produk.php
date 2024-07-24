@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produkmodel;
+use App\Models\TransaksiModel;
+use App\Models\BrandModel;
+use App\Models\ReviewModel;
 use Illuminate\Http\Request;
 
 class Produk extends Controller
@@ -14,7 +17,11 @@ class Produk extends Controller
      */
     public function index()
     {
-        return view('produk/list');
+        $produk = Produkmodel::count();
+        $transaksi = TransaksiModel::sum('total_bayar');
+        $brand = BrandModel::count();
+        $review = ReviewModel::count();
+        return view('produk/list', compact('produk','transaksi','brand','review'));
     }
 
     /**
@@ -129,7 +136,6 @@ class Produk extends Controller
     public function show()
     {
         return view('produk/list_produk');
-
     }
 
     /**
@@ -253,7 +259,7 @@ class Produk extends Controller
     {
         $search = $request->query('search');
         $order = $request->query('order');
-        $search_stok = $request->query('stok');
+        $nama_produk = $request->query('nama_produk');
 
         switch ($order[0]['column']) {
             case '0':
@@ -284,16 +290,16 @@ class Produk extends Controller
         $data_db_total = Produkmodel::all();
         $data_db_filtered = Produkmodel::where('nama_produk', 'like', '%'.$search['value'].'%');
 
-        if ($search_stok != '' && $search_stok != null) {
-            $data_db_filtered = $data_db_filtered->where('stok', '<=', $search_stok);
+        if ($nama_produk!= '' && $nama_produk != null) {
+            $data_db_filtered = $data_db_filtered->where('nama_produk', '<=', $nama_produk);
         }
 
         $data_db_filtered = $data_db_filtered->get();
 
         $data_db = Produkmodel::where('nama_produk', 'like', '%'.$search['value'].'%');
 
-        if ($search_stok != '' && $search_stok != null) {
-            $data_db = $data_db->where('stok', '<=', $search_stok);
+        if ($nama_produk != '' && $nama_produk != null) {
+            $data_db = $data_db->where('nama_produk', '<=', $nama_produk);
         }
 
         $data_db = $data_db->offset($request->query('start'))

@@ -7,20 +7,20 @@
         <div class="container">
             <div class="breadcrumb-inner">
                 <ul class="list-inline list-unstyled">
-                    <li><a href="{{ url('admin') }}">Home</a></li>
+                    <li><a href="{{ url('produk') }}">Home</a></li>
                     <li class='active'>Data Produk</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="body-content outer-top-xs" id="top-banner-and-menu">
-        <div style="margin-left: 14%;margin-right: 12%;">
+    <div class="body-content outer-top-xs" id="top-banner-and-menu" style="margin-bottom:2%;">
+        <div style="margin-left: 10%;margin-right: 10%;">
             <form style="padding: 5%;border-style: double;border-radius: 5px;margin-bottom:5%;margin-top:2%;">
                 <div class="row">
                     <div class="col">
-                        <label>Masukkan Batas Maksimal Stok</label>
-                        <input class="form-control" type="text" name="cari" id="cari">
+                        <label>Nama Produk</label>
+                        <input class="form-control" type="text" name="nama_produk" id="nama_produk">
                     </div>
                     <div class="col">
                         <input type="submit" value="Cari Produk" class="btn btn-primary" style="margin-top:33px"
@@ -33,7 +33,7 @@
             </form>
 
             <table border="1" id="data-list" class="table"
-                style="padding: 2%;border-style: double;border-radius: 5px;background-color:white;margin-bottom:5%;margin-top:5px;">
+                style="padding: 2%;border-style: double;border-radius: 5px;background-color:white;margin-bottom:3%;margin-top:5px;">
                 <thead border="1">
                     <tr>
                         <th border="1">No.</th>
@@ -159,7 +159,7 @@
             "ajax": {
                 url: url,
                 data: function(d) {
-                    d.stok = $("#cari").val();
+                    d.nama_produk = $("#nama_produk").val();
                 }
             },
 

@@ -4,7 +4,7 @@
 		<div class="header-top-inner">
 		  <div class="cnt-account">
 			<ul class="list-unstyled">
-			  <li><a href="{{ url('profiladmin') }}"><i class="icon fa fa-user"></i>My Account</a></li>
+			  <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
 			  
 			  <li><a href="{{ url('logout') }}"><i class="icon fa fa-lock"></i>Logout</a></li>
 			</ul>
@@ -21,7 +21,7 @@
 		<div class="row">
 		  <div class="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
 			
-			<div class="logo"> <a href="home.blade.php"> <img src="{{ asset('assets/images/Logooo.png') }}" alt="logo"> </a> </div></div>
+			<div class="logo"> <a href="#"> <img src="{{ asset('assets/images/Logooo.png') }}" alt="logo"> </a> </div></div>
 		  
 		  <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder"> 
 			<div class="search-area">

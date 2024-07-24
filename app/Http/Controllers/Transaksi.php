@@ -19,14 +19,20 @@ class Transaksi extends Controller
     }
     public function indexx()
     {
-        //
-        return view('transaksi/listuser');
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        return view('transaksi/listuser', compact('data'));
     }
 
     public function checkout()
     {
-        //
-        return view('transaksi/checkout');
+        $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
+            ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
+            ->selectRaw('sum(keranjang.id_user) as jumlah')
+            ->first();
+        return view('transaksi/checkout', compact('data'));
     }
 
     /**
@@ -34,7 +40,7 @@ class Transaksi extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
         $data = KeranjangModel::leftJoin('produk', 'produk.id_produk', '=', 'keranjang.id_produk')
             ->selectRaw('sum(produk.harga * keranjang.jumlah_beli) as total')
             ->first();

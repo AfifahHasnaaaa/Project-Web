@@ -15,7 +15,7 @@
 
 		    </section>
 		</div>
-		@include('template/call_footer')
+		@include('template/admin/call_footer_admin')
 	</div>
 
     @include('template/user/call_js_user')
